@@ -55,4 +55,7 @@ function calmForm (form) {
 
 function postSend () {
     alert ('Message is sent')
+    document.querySelector('#name-input').value = ''
+    document.querySelector('#email-input').value = ''
+    document.querySelector('#text-input').value = ''
 }
