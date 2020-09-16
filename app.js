@@ -9,6 +9,7 @@ const fitPlan = () => {
     }
 }
 
+//eb5ca408-f90e-4ede-a417-983b9d825ca7
 fitPlan ()
 
 // document.querySelector('#btn-plan-0').addEventListener('click', planProc(0))
@@ -50,4 +51,8 @@ function calmForm (form) {
         document.querySelector('#text-span').innerHTML = ''
         document.querySelector('#text-input').style.boxShadow = 'inset -2px -2px 3px #fff, inset 3px 3px 5px rgba(0, 0, 0, 0.22)' 
     }
+}
+
+function postSend () {
+    alert ('Message is sent')
 }

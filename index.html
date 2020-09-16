@@ -3,10 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shain Yadav</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel = 'icon' type="image/png" href = './favicon.png'>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+</script>
     <div>
         <div class="container">
             <header>
@@ -58,7 +61,7 @@
 
             <div id = 'card'>
                 <div id = 'card-top'>
-                    <img id = 'photo' src = './shh.png'/>
+                    <img id = 'photo' src = './shh.jpg'/>
                     <div id = 'hey-div'>
                         <p id = 'heying'>Hey, I'm <span id='shain'>Shain</span>!</p>
                     </div>
@@ -96,7 +99,8 @@
                     <div class="plan-card" id='card-0'>
                         <p class="plan-name">One Hour</p>
                         <div class="plan-sub-div" id = 'highSub'>
-                            <p class="plan-sub">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+                          <!--  Take the first step in faith. -->
+                            <p class="plan-sub">Youn don't have to see the whole staircase, just take the first step for 500re!</p>
                         </div>
                         <div class="plan-flex-end">
                             <button class="plan-btn" id = 'btn-plan-0' onclick="planProc(0)">
@@ -110,7 +114,7 @@
                     <div class="plan-card" id='card-1'>
                         <p class="plan-name">Month Base</p>
                         <div class="plan-sub-div">
-                            <p class="plan-sub">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+                            <p class="plan-sub">Instead of waiting to start big, start small so that you can grow big!</p>
                         </div>
                         <div class="plan-flex-end">
                             <button class="plan-btn" id = 'btn-plan-1' onclick="planProc(1)">
@@ -124,7 +128,7 @@
                     <div class="plan-card" id='card-2'>
                         <p class="plan-name">Year Base</p>
                         <div class="plan-sub-div">
-                            <p class="plan-sub">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <p class="plan-sub">You may have to fight a battle more then once to win it.</p>
                         </div>
                         <div class="plan-flex-end">
                             <button class="plan-btn" id = 'btn-plan-2' onclick="planProc(2)">
@@ -258,8 +262,7 @@
                             } else {
                                 calmForm ('text')
                             }
-                            console.log (alrighty)
-                        ">
+                            if (alrighty) sendText (nameValue, emailValue, textValue)">
                             <p>Send It!</p>
                         </button>
                     </div>
@@ -269,6 +272,18 @@
         </div>
         
     </div>
-    <script src = '/static/app.js' />
+    <script type="text/javascript">
+        function sendText (name, email, text) {
+            Email.send ({
+                SecureToken : 'afb8ff94-ac88-4618-8d6e-bd16a28c08c8',
+                To : 'dima.malezhik24@gmail.com',
+                From : 'dima.malezhik24@gmail.com',
+                Subject: 'New Text from Shain Yadav website',
+                Body : `<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"><style type="text/css">*{margin: 0;padding: 0; }body {background-color: #f4f4f4;font-family: 'Poppins', sans-serif;}#main-div {width: 70%;margin: 60px auto;box-shadow: -3px -3px 5px #ffffff, 3px 3px 5px rgba(0, 0, 0, 0.22);border-radius: 50px;padding: 60px;}#name {font-size: 40px}#email {padding: 30px 0 40px 0;font-size: 20px;}#text {font-size: 30px;}#lil {padding-top:  40px;font-size: 20px
+                    }</style></head><body><div id="main-div"><p id="name">${name}</p><p id="email">${email}</p><p id="text">${text}</p><p id="lil">E-mail is created automaticly</p></div></body></html>`
+            }).then (postSend())
+        }
+    </script>
+    <script src = 'app.js' > </script>
 </body>
 </html>

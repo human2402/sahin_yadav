@@ -99,7 +99,6 @@ a {
     height: 6vw;
     width: 6vw;
     border-radius: 100px;
-    transform: rotate(21deg);
 }
 
 #hey-div {
@@ -193,8 +192,9 @@ a {
     place-content: center;
 }
 .plan-sub {
-    padding: 0.8vh 22% 1.5vh 0;
+    padding: 1.2vh 22% 2vh 0;
     font-size: 1.5vw;
+    line-height: 1.8
 }
 
 .plan-btn {
@@ -221,7 +221,7 @@ a {
 .contact-icon-holder {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 0.5vh;
+    padding-bottom: 2vh;
 }
 
 .soc-icons {
@@ -238,11 +238,11 @@ a {
     flex-wrap: wrap;
 }
 .nik-p {
-    font-size: 1.8vw;
+    font-size: 2vw;
     line-height: 1;
-    padding-bottom: 1vh;
+    padding-bottom: 2vh;
 }
-#whats-icon
+#whats-icon{
     height: 3.6vw;
     width: 6vw;
 }
@@ -391,6 +391,7 @@ a {
         font-size: 3.7vw;
         line-height: 2.2;
     }
+    #whats-icon {height: 9vw}
 
     #text-me-p {
         font-size: 6vw;
